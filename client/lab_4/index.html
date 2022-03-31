@@ -5,43 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jason C. Bae Lab 4: HTML Forms</title>
-    <link rel='stylesheet' href='styles.css'/>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
     <div class="header"></div>
     <div class="carousel">
-        <div class="carousel_item carousel_item--visible">
-            <img src='images/one.svg'/>
+        <div class="carousel__item carousel__item--visible">
+            <img src="images/one.svg" />
         </div>
-        <div class='carousel-item'>
-            <img src='images/two.svg'/>
+        <div class="carousel-item">
+            <img src="images/two.svg" />
         </div>
-        <div class='carousel-item'>
-            <img src='images/three.svg'/>
+        <div class="carousel-item">
+            <img src="images/three.svg"/>
         </div>
-        <div class='carousel-item'>
-            <img src='images/four.svg'/>
+        <div class="carousel-item">
+            <img src="images/four.svg" />
         </div>
-        <div class='carousel-item last-item'>
-            <img src='images/five.svg'/>
+        <div class="carousel-item">
+            <img src="images/five.svg" />
+        </div>
+
+        <div class="carousel__actions">
+            <button id="carousel__button--prev"><strong>Prev</strong></button>
+            <button id="carousel__button--next"><strong>Next</strong></button>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-item footer-one">
+            <strong>footer item 1</strong>
+        </div>
+        <div class="footer-item footer-two">
+            <strong>footer item 2</strong>
+        </div>
+        <div class="footer-item footer-three">
+            <strong>footer item 3</strong>
         </div>
     </div>
 
-    <div class="carousel_actions">
-        <button id="carousel_button--prev">Previous slide</button>
-        <button id="carousel_button--next">Next slide</button>
-    </div>
-    <div class='footer'>
-        <div class='footer-item footer-one'>
-            footer-item 1
-        </div>
-        <div class='footer-item footer-two'>
-            footer item 2
-        </div>
-        <div class='footer-item footer-three'>
-            footer item 3
-        </div>
-    </div>
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
