@@ -1,15 +1,40 @@
-function mainEvent(event) {
-    // console.log(event);
-    const button = document.querySelector('.submit-button');
-    button.addEventListener('click', () => {
-        console.log('clicked');
-        alert('clicked');
-    })
+let slidePosition = 0;
+const slides = document.getElementsByClassName('carousel_item');
+const totalSlides = slides.length;
+
+document.
+    getElementById('carousel_button--next')
+    .addEventListener("click", function() {
+        moveToNextSlide();
+    });
+
+document.
+    getElementById('carousel_button--prev')
+    .addEventListener("click", function() {
+        moveToNextSlide();
+    });
+
+function updateSlidePosition() {
+    for (let slide of slides) {
+        slide.classList.remove('carousel_item--visible');
+        slide.classList.remove('carousel_item--hidden');
+    }
+    slides[slidePosition].classList.add('carousel_item--visible');
+}
+function moveToNextSlide() {
+    if (slidePosition == totalSlides) {
+        slidePosition = 0;
+    } else {
+        slidePosition++;
+    }
+    updateSlidePosition();
 }
 
-document.addEventListener('DOMContentLoaded', async (event) => {
-    console.log('script.loaded');
-    mainEvent(event)
-});
-
-// console.log('end of file'); demo of race condition
+function moveToPrevSlide() {
+    if (slidePosition == 0) {
+        slidePosition = totalSlides - 1;
+    } else {
+        slidePosition--;
+    }
+    updateSlidePosition();
+}
