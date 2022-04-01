@@ -1,32 +1,93 @@
-.header {
-    border: 1px solid #fff;
-    background-color: #D6E9FE;
-    height: 100px;
-    flex: 1;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #5995DA;
+    text-decoration: none;
+}
+
+/* Page styles */
+.title{
+    width: 100%;
+    display: inline-block;
+    background-color: rgba(0,139, 139,0.8);
+    padding: 10px 15px;
+    margin: 0;
+}
+
+.menu-container {
+    color: #fff;
+    background-color: #5995DA;  /* Blue */
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    border: 1px solid #fff;
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links {
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: end;
+}
+
+.database, .main {
+    margin-left: 20px;
+}
+
+.header-container {
+    color: #5995DA;
+    background-color: #D6E9FE;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    width: 900px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.github, .project {
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-end;
+    margin-bottom: 20px;
+}
+.header p {
+    display: flex;
+    align-items: center;
+}
+
+.photo-grid-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+  
 .carousel {
     overflow: hidden;
     max-width: 600px;
     position: relative;
 }
 
-.carousel .carousel__item,
-.carousel .carousel__item--hidden {
-    display: none;
-}
-
-.carousel .carousel__item img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-}
-
-.carousel .carousel__item--visible {
-    display: block;
-    animation: fadeVisibility 0.5s;
-}
-
-.carousel .carousel__actions {
+.carousel__actions {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -35,21 +96,43 @@
     transform: translateY(-50%);
 }
 
-.carousel .carousel__actions button {
-    border-radius: 50px;
+button {
+    border: 3px solid #fff;
+    display:block;
+    border-radius: 10px;
     border: 0;
-    font-weight: bold;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
+    font-weight: 900;
+    font-size: 1.5em;
+    width: 100px;
+    height: 50px;
 }
 
-.carousel .carousel__actions button#carousel__button--prev {
-    margin-left: 20px;
+button:hover {
+    border: 3px solid rgba(0,139, 139,0.8);
+    background-color: orange;
 }
 
-.carousel .carousel__actions button#carousel__button--next {
-    margin-right: 20px;
+button#prev {
+    margin-left: -100px;
+}
+
+button#next {
+    margin-right: -100px;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+    animation: fadeVisibility 0.5s;
+}
+
+.carousel__item {
+    border: 1px solid #fff;
+    width: 300px;
+    height: 300px;
 }
 
 @keyframes fadeVisibility {
@@ -64,19 +147,25 @@
 
 .footer {
     display: flex;
-    justify-content: stretch;
+    justify-content: space-between;
 }
 
 .footer-item {
     border: 1px solid #fff;
     background-color: #D6E9FE;
-    height: 100px;
+    height: 200px;
     flex: 1;
 }
 
-.footer-one,
-.footer-three {
+.footer-one, .footer-three {
     background-color: #5995DA;
     flex: initial;
     width: 225px;
+}
+
+/* Mobile Styles */
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .footer-one, .footer-three {
+        flex: 2;
+    }
 }
