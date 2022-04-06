@@ -13,36 +13,40 @@
         <div class="container">
             <div class="header">Jason C. Bae Lab 5: HTML Forms</div>
             <div class="columns">
-                <form class="page_item main_form">
-                    <div class="form_item">
-                        <label for="fname">First Name</label>
-                        <input type="text" name="fname" id="fname">
+                <div class="box">
+                    <form action="https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json" method="get" class="main_form">
+                        <div class="form_item">
+                            <label for="fname">First Name</label>
+                            <input type="text" name="fname" id="fname">
+                        </div>
+                        <div class="form_item">
+                            <label for="pref">Food Preference</label>
+                            <input type="text" name="pref" id="pref">
+                        </div>
+                        <div class="radio">
+                            <legend>Veggie or Vegan?</legend>
+                            <label for='yes' class='radio-label'>
+                                Yes
+                            </label>
+                            <input id='yes'
+                                    name='talk-type'
+                                    type='radio'
+                                    value='yes' />
+                            <label for='no' class='radio-label'>
+                                No
+                            </label>
+                            <input id='no'
+                                    name='talk-type'
+                                    type='radio'
+                                    value='no' />
+                        </div>
+                        <button class="button" type='submit'>Submit</button>
+                    </form>
+                </div>
+                <div class="box">
+                    <div class="text_item">
+                        This is going to be something in two weeks.
                     </div>
-                    <div class="form_item">
-                        <label for="pref">Food Preference</label>
-                        <input type="text" name="pref" id="pref">
-                    </div>
-                    <div class="radio">
-                        <legend>Veggie or Vegan?</legend>
-                        <label for='yes' class='radio-label'>
-                            Yes
-                        </label>
-                        <input id='yes'
-                                name='talk-type'
-                                type='radio'
-                                value='yes' />
-                        <label for='no' class='radio-label'>
-                            No
-                        </label>
-                        <input id='no'
-                                name='talk-type'
-                                type='radio'
-                                value='no' />
-                    </div>
-                    <button class="button" type='submit'>Submit</button>
-                </form>
-                <div class="page_item text_item">
-                    This is going to be something in two weeks.
                 </div>
             </div>
         </div>

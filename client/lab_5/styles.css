@@ -13,38 +13,44 @@ body {
 }
 
 /* Page Layout */
-.columns {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 20px;
-  padding: 10px;
-}
-
-.columns form {
-  display: flex;
-  flex-direction: column;
-}
-
 .wrapper {
   display: flex;
 }
+
 .container {
   max-width: 960px;
   margin-top: 25px;
 }
 
 .header {
-  display: block;
+  display: flex;
   padding: 15px;
   border-radius: 4px;
   background-color: hsl(48, 100%, 67%);
 }
 
-.page_item {
+.columns {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
-  margin: auto;
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+.box form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.box {
+  display: flex;
+  align-self: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 20px;
   padding: 15px;
   border-radius: 4px;
   background-color: #efefef;
@@ -52,8 +58,9 @@ body {
 
 .text_item {
   display: flex;
-  flex-wrap: wrap;
-  padding: 15px;
+  align-self: stretch;
+  align-items: end;
+  padding: 10px;
   border-radius: 4px;
   background-color: #efefef;
 }
@@ -61,6 +68,7 @@ body {
 .form_item {
   display: flex;
   flex-direction: column;
+  align-content: flex-end;
 }
 
 label, legend {
@@ -71,33 +79,23 @@ label, legend {
 
 .radio {
   border: none;
-  margin-bottom: 10px;
-  margin-left: -40px;
-}
-
-.radio legend {
-  margin-bottom: 10px;
 }
 
 .radio .radio-label {
   display: block;
   font-size: 14px;
-  margin: 0 2px 0 2px;
-}
-
-.radio input[type='radio'] {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: -2px 2px;
 }
 
 .radio .radio-label,
-.radio input[type='radio'] {
+.radio input {
   float: left;
 }
 
 button[type='submit'] {
   display: flex;
   color: #efefef;
+  margin-top: 20px;
   margin-inline-end: auto;
   padding: 10px;
   border: #efefef;
@@ -107,4 +105,14 @@ button[type='submit'] {
 
 button:hover {
   color: black;
+}
+
+@media only screen and (max-width: 560px) {
+  .columns {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  .text_item, .text_item {
+    flex: 1;
+  }
 }
