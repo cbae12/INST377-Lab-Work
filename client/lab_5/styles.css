@@ -16,6 +16,13 @@ body {
 .columns {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.columns form {
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper {
@@ -24,4 +31,80 @@ body {
 .container {
   max-width: 960px;
   margin-top: 25px;
+}
+
+.header {
+  display: block;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: hsl(48, 100%, 67%);
+}
+
+.page_item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #efefef;
+}
+
+.text_item {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #efefef;
+}
+
+.form_item {
+  display: flex;
+  flex-direction: column;
+}
+
+label, legend {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.radio {
+  border: none;
+  margin-bottom: 10px;
+  margin-left: -40px;
+}
+
+.radio legend {
+  margin-bottom: 10px;
+}
+
+.radio .radio-label {
+  display: block;
+  font-size: 14px;
+  margin: 0 2px 0 2px;
+}
+
+.radio input[type='radio'] {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.radio .radio-label,
+.radio input[type='radio'] {
+  float: left;
+}
+
+button[type='submit'] {
+  display: flex;
+  color: #efefef;
+  margin-inline-end: auto;
+  padding: 10px;
+  border: #efefef;
+  border-radius: 4px;
+  background-color: hsl(141, 53%, 53%);
+}
+
+button:hover {
+  color: black;
 }
