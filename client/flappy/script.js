@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function generateObstacle() {
         let obstacleLeft = 500
-        let randomHeight = Math.random() * 60
+        let randomHeight = Math.random() * 50
         let obstacleBottom = randomHeight
         const obstacle = document.createElement('div')
         const topObstacle = document.createElement('div')
